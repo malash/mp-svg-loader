@@ -4,7 +4,6 @@ import filesize from 'rollup-plugin-filesize';
 import { name, version, dependencies, devDependencies, peerDependencies } from './package.json';
 
 const target = process.env.TARGET || 'es';
-const env = process.env.NODE_ENV || 'development';
 const banner = `/*
  * @license
  * ${name} v${version}
