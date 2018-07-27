@@ -4,7 +4,6 @@
   "description": "Webpack loader processing SVG in WeChat Mini Program",
   "main": "dist/mp-svg-loader.cjs.js",
   "module": "dist/mp-svg-loader.es.js",
-  "unpkg": "dist/mp-svg-loader.umd.js",
   "scripts": {
     "prepublish": "npm run build",
     "lint": "eslint *.js src/ test/",
@@ -16,11 +15,9 @@
     "dev": "concurrently -p \"[{name}]\" -n \"lint,ava\" \"npm run lint:watch\" \"npm run ava:watch\"",
     "test": "npm run lint && npm run coverage",
     "clean": "rimraf dist",
-    "build": "npm run clean && npm run build:cjs && npm run build:es && npm run build:umd && npm run build:umd-min",
+    "build": "npm run clean && npm run build:cjs && npm run build:es",
     "build:cjs": "cross-env TARGET=cjs rollup -c",
-    "build:es": "cross-env TARGET=es rollup -c",
-    "build:umd": "cross-env TARGET=umd rollup -c",
-    "build:umd-min": "cross-env TARGET=umd NODE_ENV=production rollup -c"
+    "build:es": "cross-env TARGET=es rollup -c"
   },
   "ava": {
     "babel": "inherit",
