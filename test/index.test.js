@@ -42,3 +42,4 @@ run.title = (providedTitle, fixtureName) => `${providedTitle} fixture ${fixtureN
 
 
 test(run, 'file-loader');
+test(run, 'svg-inline-loader');
