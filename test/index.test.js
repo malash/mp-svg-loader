@@ -8,7 +8,6 @@ const FIXTURES_PREFIX = path.resolve(__dirname, '../fixtures');
 
 const runWebpack = fixturePath => new Promise((resolve, reject) => {
   const configPath = path.resolve(fixturePath, './webpack.config.js');
-  // eslint-disable-next-line global-require, import/no-dynamic-require
   const config = require(configPath);
   const compiler = webpack(config);
   compiler.run((err, stats) => {
@@ -28,7 +27,6 @@ const run = async (t, fixtureName) => {
   await fsExtra.remove(tmpDir);
   try {
     await runWebpack(fixturePath);
-    // eslint-disable-next-line global-require, import/no-dynamic-require
     const bundle = require(tmpDir);
     await bundle.main(t);
   } catch (e) {
@@ -40,6 +38,6 @@ const run = async (t, fixtureName) => {
 
 run.title = (providedTitle, fixtureName) => `${providedTitle} fixture ${fixtureName}`.trim();
 
-
 test(run, 'file-loader');
 test(run, 'svg-inline-loader');
+test(run, 'url-loader');

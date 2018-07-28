@@ -72,6 +72,7 @@
     "rollup-plugin-filesize": "^1.4.2",
     "svg-inline-loader": "^0.8.0",
     "svgo": "^1.0.5",
+    "url-loader": "^1.0.1",
     "webpack": "^4.16.2"
   },
   "dependencies": {
