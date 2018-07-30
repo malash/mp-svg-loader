@@ -1,6 +1,6 @@
 {
   "name": "mp-svg-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Webpack loader processing SVG in WeChat Mini Program",
   "main": "dist/mp-svg-loader.cjs.js",
   "module": "dist/mp-svg-loader.es.js",
